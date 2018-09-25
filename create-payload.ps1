@@ -1,4 +1,4 @@
-#Write-Host "Taking in file: $($args[0])"
+Write-Host "Taking in file: $($args[0])"
 $file = $args[0]
 $payload = Get-Content -Path $file -Encoding Byte
 $base64 = [System.Convert]::ToBase64String($payload)
