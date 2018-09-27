@@ -1,6 +1,8 @@
 # ads-payload
 Powershell script which will take any payload and put it in the a bat script which delivers the payload. The payload is delivered using environment variables, alternating-data-streams and wmic. This was specifically made to evade Palo Alto Traps endpoint protection, which has now been patched through responsible disclosure. 
 
+Demo: https://www.youtube.com/watch?v=ehsbRoQrrdI
+
 To run it, simply ./create-payload.ps1 <input file.exe> 
 
 When the BAT file gets executed it will do the following: 
