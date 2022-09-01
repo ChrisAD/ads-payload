@@ -3,7 +3,7 @@ Powershell script which will take any payload and put it in the a bat script whi
 
 Demo: https://www.youtube.com/watch?v=ehsbRoQrrdI
 
-To run it, simply ./create-payload.ps1 <input file.exe> 
+To run it, simply `./create-payload.ps1 <input file.exe>`
 
 When the BAT file gets executed it will do the following: 
 - Populate environment variables with the base64 encoded executable 
@@ -15,9 +15,9 @@ When the BAT file gets executed it will do the following:
 The executable will be chopped into smaller parts and then put into environment variables. This was a workaround to make it store arbitrary sizes of executables. 
 
 
-#TODOS
-* Add a small Test-Path to make sure the desktop.ini file exists. 
-* Make it not touch the filesystem any more than necessary. Certutil directly into ADS? 
-* Payload from invoke-webrequest
+# TODOS
+- [] Add a small Test-Path to make sure the desktop.ini file exists. 
+- [] Make it not touch the filesystem any more than necessary. Certutil directly into ADS? 
+- [] Payload from invoke-webrequest
 
 Contributors are welcome!

