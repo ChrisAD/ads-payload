@@ -16,8 +16,8 @@ The executable will be chopped into smaller parts and then put into environment 
 
 
 # TODOS
-- [] Add a small Test-Path to make sure the desktop.ini file exists. 
-- [] Make it not touch the filesystem any more than necessary. Certutil directly into ADS? 
-- [] Payload from invoke-webrequest
+- [ ] Add a small Test-Path to make sure the desktop.ini file exists. 
+- [ ] Make it not touch the filesystem any more than necessary. Certutil directly into ADS? 
+- [ ] Payload from invoke-webrequest
 
 Contributors are welcome!
