@@ -10,7 +10,7 @@
 
 Write-Host "Taking in file: $($args[0])"
 $file = $args[0]
-$payload = Get-Content -Path $file -Encoding Byte
+$payload = Get-Content -Path $file -AsByteStream
 $base64 = [System.Convert]::ToBase64String($payload)
 $maximumCommandLength=1000
 $payloadLength = $base64.length
